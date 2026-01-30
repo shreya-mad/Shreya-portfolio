@@ -1,9 +1,11 @@
-/* ========== RESET SAFETY ========== */
+/* ================= RESET ================= */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* ========== NAVBAR ========== */
+/* ================= NAVBAR ================= */
 .navbar {
   position: fixed;
   top: 0;
@@ -14,11 +16,10 @@
   background: #0e1626;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   z-index: 9999;
 }
 
-/* LEFT */
+/* ================= LEFT ================= */
 .nav-left {
   display: flex;
   align-items: center;
@@ -30,36 +31,69 @@
   color: #f97316;
 }
 
-/* CENTER LINKS (DESKTOP) */
+/* ================= NAV LINKS (DESKTOP) ================= */
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 40px;
+  gap: 56px;
+  margin-left: auto; /* 🔥 push menu to right */
 }
 
 .nav-links li a {
   color: #e5e7eb;
   text-decoration: none;
   font-weight: 500;
+  position: relative;
 }
 
 .nav-links li a:hover {
   color: #f97316;
 }
 
-/* RIGHT */
+/* ================= ACTIVE LINK ================= */
+.nav-links a.active {
+  color: #f97316;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: #f97316;
+  border-radius: 2px;
+}
+
+/* ================= DOWNLOAD ICON ================= */
+.download-cv {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: #e5e7eb;
+  transition: 0.3s;
+}
+
+.download-cv:hover {
+  color: #f97316;
+  transform: translateY(-2px);
+}
+
+/* ================= RIGHT ================= */
 .nav-right {
   display: flex;
   align-items: center;
   gap: 12px;
+  margin-left: 16px;
 }
 
-/* ========== HAMBURGER ========== */
+
+/* ================= HAMBURGER ================= */
 .hamburger {
   display: none; /* hidden on desktop */
   background: none;
   border: none;
-  padding: 0;
   cursor: pointer;
   flex-direction: column;
   gap: 5px;
@@ -72,37 +106,7 @@
   transition: 0.3s;
 }
 
-/* ========== MOBILE ========== */
-@media (max-width: 768px) {
-
-  /* hide desktop menu */
-  .nav-links {
-    position: fixed;
-    top: 64px;
-    left: 0;
-    width: 100%;
-    background: #0b1220;
-    flex-direction: column;
-    gap: 0;
-    display: none;
-  }
-
-  .nav-links.open {
-    display: flex;
-  }
-
-  .nav-links li {
-    padding: 14px 6%;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-  }
-
-  /* show hamburger */
-  .hamburger {
-    display: flex;
-  }
-}
-
-/* ========== HAMBURGER ANIMATION ========== */
+/* ================= HAMBURGER ANIMATION ================= */
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -115,52 +119,51 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-.download-cv {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  color: #e5e7eb;
-  transition: all 0.3s ease;
-}
-
-.download-cv:hover {
-  color: #f97316;
-  transform: translateY(-2px);
-}
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
-  .download-cv {
-    justify-content: flex-start; /* 👈 align left */
-    width: 100%;                 /* take full row width */
+  /* show hamburger */
+  .hamburger {
+    display: flex;
   }
-}
-/* ACTIVE LINK */
-.nav-links a.active {
-  color: #f97316;
-  position: relative;
-}
 
-/* ORANGE UNDERLINE */
-.nav-links a.active::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 100%;
-  height: 2px;
-  background: #f97316;
-  border-radius: 2px;
-}
+  /* mobile menu container */
+  .nav-links {
+    position: fixed;
+    top: 64px;                 /* below navbar */
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 64px); /* 🔥 full screen minus navbar */
+    background: #0b1220;
+    flex-direction: column;
+    gap: 0;
+    display: none;
+    z-index: 9998;
+    overflow-y: auto;
+  }
 
-/* MOBILE FIX */
-@media (max-width: 768px) {
+   .nav-left {
+    display: none; /* 🔥 hide SM on mobile */
+  }
+
+  /* open state */
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 18px 6%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  /* remove underline in mobile */
   .nav-links a.active::after {
-    display: none; /* cleaner in mobile menu */
+    display: none;
+  }
+
+  /* download icon align */
+  .download-cv {
+    justify-content: flex-start;
+    width: 100%;
   }
 }
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 56px;
-  margin-left: auto;
-}
+
