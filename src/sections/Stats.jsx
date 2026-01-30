@@ -1,5 +1,5 @@
 import "../styles/stats.css";
-import { projectsData } from "../data/projectsData";
+import { projectsData } from "../data/ProjectsData";
 import { skillsData } from "../data/skillsData";
 import { useEffect, useState } from "react";
 

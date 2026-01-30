@@ -1,6 +1,6 @@
 import "../styles/Projects.css";
 import { useState } from "react";
-import { projectsData } from "../data/projectsData";
+import { projectsData } from "../data/ProjectsData";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const Projects = () => {
