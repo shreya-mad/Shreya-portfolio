@@ -4,7 +4,7 @@ export const certificationsData = [
     provider: "Cuvette Pvt Ltd",
     year: "2023",
     description:
-      "Demonstrates proficiency in SQL queries, database management, and data analysis.",
+      "Demonstrates proficiency in MERN,hands-on experience in building full-stack web applications using MongoDB, Express, React, and Node.js.",
     image: "/certificates/CuvetteIntershipCertificate.jpeg",
     pdf: "/certificates/CuvetteIntershipCertificate.pdf",
   },
