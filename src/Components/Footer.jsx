@@ -102,7 +102,8 @@ const Footer = () => {
       <div className="footer-cta">
         <h4>Get In Touch</h4>
         <p>Ready to start your project?</p>
-        <a href="/contact" className="cta-btn">Contact Me</a>
+        <Link to="/contact" className="cta-btn">Contact Me</Link>
+        
       </div>
 
       {/* BOTTOM */}
