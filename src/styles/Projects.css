@@ -1,0 +1,143 @@
+.projects-page {
+  background: linear-gradient(180deg, #0b1220, #0e1626);
+  color: #e5e7eb;
+  padding-bottom: 120px;
+}
+
+/* HEADER */
+.projects-hero {
+  text-align: center;
+  padding: 0px 6% 80px;
+}
+
+.projects-hero h1 {
+  font-size: 44px;
+}
+
+.projects-hero span {
+  color: #f97316;
+}
+
+.projects-hero p {
+  max-width: 720px;
+  margin: 16px auto;
+  color: #9ca3af;
+}
+
+/* SEARCH + FILTER */
+.projects-controls {
+  margin-top: 30px;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+}
+
+.projects-controls input,
+.projects-controls select {
+  background: #111827;
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 10px 14px;
+  border-radius: 10px;
+  color: #e5e7eb;
+}
+
+/* GRID */
+.projects-grid {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 6%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* CARD */
+.project-card {
+  background: #111827;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: all 0.35s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(249,115,22,0.5);
+}
+
+/* IMAGE */
+.project-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+/* CONTENT */
+.project-content {
+  padding: 20px;
+}
+
+.project-content h3 {
+  margin-bottom: 4px;
+}
+
+.role {
+  color: #f97316;
+  font-size: 13px;
+}
+
+.project-content p {
+  font-size: 14px;
+  color: #9ca3af;
+  margin: 12px 0;
+  line-height: 1.6;
+}
+
+/* TECH */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tech-stack span {
+  background: #1f2937;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+/* ACTIONS */
+.project-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.project-actions a {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #e5e7eb;
+  background: #1f2937;
+}
+
+.project-actions a.live {
+  background: linear-gradient(180deg, #f97316, #ea580c);
+  color: #000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-controls {
+    flex-direction: column;
+    align-items: center;
+  }
+}

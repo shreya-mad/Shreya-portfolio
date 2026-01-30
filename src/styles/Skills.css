@@ -1,0 +1,164 @@
+.skills-page {
+  background: linear-gradient(180deg, #0b1220, #0e1626);
+  color: #e5e7eb;
+  padding-bottom: 120px;
+}
+
+/* HERO */
+.skills-hero {
+  text-align: center;
+  padding: 0px 6% 60px;
+}
+
+.skills-hero h1 {
+  font-size: 44px;
+}
+
+.skills-hero h1 span {
+  color: #f97316;
+}
+
+.skills-hero p {
+  max-width: 720px;
+  margin: 16px auto;
+  color: #9ca3af;
+}
+
+/* CONTROLS */
+.skills-controls {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 6%;
+  text-align: center;
+}
+
+.skills-controls input {
+  background: #111827;
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 10px 14px;
+  border-radius: 10px;
+  color: #fff;
+  width: 260px;
+}
+
+.skills-filters {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.skills-filters button {
+  background: #1f2937;
+  border: none;
+  color: #e5e7eb;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.skills-filters button.active {
+  background: #f97316;
+  color: #000;
+}
+
+.skills-count {
+  margin-top: 12px;
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+/* GRID */
+.skills-grid {
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding: 0 6%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* CARD */
+.skill-card {
+  background: #111827;
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-header h3 {
+  font-size: 15px;
+}
+
+.level {
+  font-size: 11px;
+  background: rgba(249,115,22,0.15);
+  color: #f97316;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+.skill-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #9ca3af;
+  margin: 12px 0;
+}
+
+/* PROGRESS */
+.progress-circle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.progress-circle svg {
+  width: 48px;
+  height: 48px;
+}
+
+.progress-circle .bg {
+  fill: none;
+  stroke: #1f2937;
+  stroke-width: 3.8;
+}
+
+.progress-circle .progress {
+  fill: none;
+  stroke: #f97316;
+  stroke-width: 3.8;
+  stroke-linecap: round;
+}
+
+.progress-circle span {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-controls input {
+    width: 100%;
+  }
+}
+
+

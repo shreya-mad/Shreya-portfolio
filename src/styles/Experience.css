@@ -1,0 +1,229 @@
+/* ================= EXPERIENCE PAGE ================= */
+
+.experience-page {
+  background: linear-gradient(180deg, #0b1220, #0e1626);
+  color: #e5e7eb;
+  padding-bottom: 120px;
+}
+
+/* ================= HEADER ================= */
+
+.experience-hero {
+  text-align: center;
+  padding: 0px 6% 80px;
+}
+
+.experience-hero h1 {
+  font-size: 44px;
+  font-weight: 700;
+}
+
+.experience-hero h1 span {
+  color: #f97316;
+}
+
+.experience-hero p {
+  max-width: 720px;
+  margin: 16px auto 0;
+  color: #9ca3af;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* ================= TIMELINE ================= */
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 0;
+}
+
+/* CENTER LINE */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(
+    to bottom,
+    rgba(249, 115, 22, 1),
+    rgba(249, 115, 22, 0.2),
+    transparent
+  );
+  transform: translateX(-50%);
+}
+
+/* ================= TIMELINE ITEM ================= */
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 30px 40px;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+}
+
+/* DOT */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 44px;
+  width: 14px;
+  height: 14px;
+  background: #f97316;
+  border-radius: 50%;
+  box-shadow: 0 0 14px rgba(249, 115, 22, 0.8);
+  z-index: 2;
+}
+
+.timeline-item.left::before {
+  right: -7px;
+}
+
+.timeline-item.right::before {
+  left: -7px;
+}
+
+/* ================= CARD ================= */
+
+.timeline-content {
+  background: #111827;
+  border-radius: 16px;
+  padding: 26px 26px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.35s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-6px);
+  border-color: rgba(249, 115, 22, 0.5);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+/* ================= HEADER INSIDE CARD ================= */
+
+.exp-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.exp-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #f9fafb;
+}
+
+/* BADGE (Freelance etc.) */
+.badge {
+  background: rgba(249, 115, 22, 0.15);
+  color: #f97316;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* COMPANY LOGO */
+.company-logo {
+  max-height: 26px;
+  object-fit: contain;
+}
+
+/* ================= CONTENT ================= */
+
+.timeline-content h4 {
+  margin: 10px 0 6px;
+  font-size: 15px;
+  color: #f97316;
+  font-weight: 600;
+}
+
+.exp-meta {
+  font-size: 13px;
+  color: #9ca3af;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.exp-desc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #d1d5db;
+  margin-bottom: 16px;
+}
+
+/* ================= TECH STACK ================= */
+
+.tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech span {
+  background: #1f2937;
+  color: #e5e7eb;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tech span.more {
+  background: rgba(249, 115, 22, 0.15);
+  color: #f97316;
+  border-color: rgba(249, 115, 22, 0.4);
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet & Mobile */
+@media (max-width: 900px) {
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 20px;
+    text-align: left;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0;
+  }
+
+  .timeline-item::before {
+    left: 14px;
+    right: auto;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .experience-hero h1 {
+    font-size: 34px;
+  }
+
+  .timeline-content {
+    padding: 22px;
+  }
+
+  .exp-desc {
+    font-size: 13.5px;
+  }
+}

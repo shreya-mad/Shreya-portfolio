@@ -1,0 +1,39 @@
+.story-section {
+  padding: 30px 6%;
+  background: #0b1220; /* slightly lighter than hero */
+  text-align: center;
+}
+
+/* Heading */
+.story-section h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #e5e7eb;
+}
+
+.story-section h2 span {
+  color: #f97316;
+}
+
+/* Subtitle */
+.story-subtitle {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  color: #9ca3af;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Content box */
+.story-content {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.story-content p {
+  color: #d1d5db;
+  font-size: 15.5px;
+  line-height: 1.9;
+  margin-bottom: 22px;
+}

@@ -1,0 +1,408 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 80vh;
+  padding: 0px 6% 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: radial-gradient(
+      circle at 70% 40%,
+      rgba(249, 115, 22, 0.15),
+      transparent 40%
+    ),
+    linear-gradient(180deg, #0b1220, #0e1626);
+  color: #e5e7eb;
+}
+
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(249, 115, 22, 0.12);
+  animation: bubbleFloat 18s linear infinite;
+  pointer-events: none;
+}
+
+/* Bubble 1 */
+.hero::before {
+  width: 18px;
+  height: 18px;
+  left: 20%;
+  bottom: -20px;
+  animation-delay: 0s;
+}
+
+/* Bubble 2 */
+.hero::after {
+  width: 12px;
+  height: 12px;
+  left: 70%;
+  bottom: -30px;
+  animation-delay: 6s;
+}
+
+@keyframes bubbleFloat {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120vh);
+    opacity: 0;
+  }
+}
+
+
+
+/* LEFT SIDE */
+.hero-left {
+  max-width: 620px;
+}
+
+.hero-left h4 {
+  font-size: 14px;
+  color: #9ca3af;
+  margin-top: 80px;
+}
+
+.hero-left h1 {
+  font-size: 56px;
+  line-height: 1.1;
+  color: #f97316;
+  font-weight: 800;
+  margin-top: 0;
+}
+
+.underline {
+  width: 60px;
+  height: 4px;
+  background: #f97316;
+  margin: 12px 0 20px;
+  border-radius: 4px;
+}
+
+.hero-left h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.hero-left p {
+  color: #9ca3af;
+  line-height: 1.7;
+  max-width: 520px;
+}
+
+/* INFO BOXES */
+.hero-info {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.info-box {
+  background: #111827;
+  padding: 12px 18px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.info-box.status {
+  border: 1px solid rgba(34, 197, 94, 0.4);
+  color: #22c55e;
+}
+
+/* BUTTONS */
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.btn {
+  padding: 14px 26px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background: #f97316;
+  color: #000;
+  text-decoration: none;
+}
+
+
+.btn.secondary {
+  /* background: #f97316; */
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+}
+ 
+.blinking-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #22c55e; /* green */
+  border-radius: 50%;
+  display: inline-block;
+  animation: blink 1.4s infinite both;
+}
+/* RIGHT SIDE CONTAINER */
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CIRCULAR RING */
+.profile-ring {
+  width: 340px;        /* 🔒 fixed size */
+  height: 340px;       /* 🔒 fixed size */
+  padding: 0px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f97316, #1f2937);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* IMAGE ITSELF */
+.profile-ring img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;   /* prevents stretching */
+  background: #fff;
+}
+
+/* Floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Apply animation to profile ring */
+.profile-ring {
+  animation: float 4s ease-in-out infinite;
+}
+
+.profile-ring:hover {
+  animation-play-state: paused;
+}
+
+
+
+@media (max-width: 768px) {
+  .hero-right {
+    margin-top: 40px;
+  }
+
+  .profile-ring {
+    width: 220px;
+    height: 220px;
+  }
+   .hero {
+    flex-direction: column-reverse; /* 👈 image first */
+    text-align: center;
+    padding-top: 40px;
+  }
+   .hero-left {
+    max-width: 100%;
+  }
+
+  .hero-left h1 {
+    font-size: 38px;
+  }
+
+  .hero-left h2 {
+    font-size: 20px;
+  }
+
+  .hero-left p {
+    max-width: 100%;
+  }
+  
+
+  .info-box {
+    width: auto;        /* override 100% */
+    min-width: 140px;
+  }
+  
+
+ .hero-info {
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Buttons take same width as hero-info */
+  .hero-buttons {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+  }
+  .hero-right {
+    margin-bottom: 30px;
+  }
+
+  .profile-ring {
+    width: 220px;
+    height: 220px;
+  }
+.info-box {
+    width: auto;        /* 🔥 critical */
+    min-width: 140px;
+  }
+}
+
+
+/* Smooth blinking animation */
+@keyframes blink {
+  0% {
+    opacity: 0.7;
+    box-shadow: 0 0 6px rgba(34, 197, 94, 0.8);
+  }
+  50% {
+    opacity: 0.3;
+    box-shadow: 0 0 2px rgba(34, 197, 94, 0.4);
+  }
+  100% {
+    opacity: 0.8;
+    box-shadow: 0 0 6px rgba(34, 197, 94, 0.8);
+  }
+}
+
+
+/* COMMON SIZE FOR INFO BOXES & BUTTONS */
+.info-box,
+.btn {
+  width: 180px;           /* same width */
+  height: 52px;           /* same height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-sizing: border-box;
+}
+
+/* INFO BOX STYLING */
+.info-box {
+  background: #111827;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+/* STATUS SPECIAL COLOR */
+.info-box.status {
+  border: 1px solid rgba(34, 197, 94, 0.4);
+  color: #22c55e;
+}
+
+/* BUTTONS */
+.btn {
+  font-weight: 600;
+  border-radius: 12px;
+  text-align: center;
+}
+
+/* KEEP RESPONSIVE */
+@media (max-width: 768px) {
+  .info-box,
+  .btn {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  /* HERO LAYOUT */
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  /* IMAGE FIRST */
+  .hero-right {
+    margin-bottom: 28px;
+  }
+
+  /* ===== LOCATION + STATUS ===== */
+  .hero-info {
+    display: inline-flex;          /* 👈 key */
+    gap: 12px;
+    justify-content: center;
+    align-items: stretch;
+    width: fit-content;
+    margin: 24px auto 16px;
+  }
+
+  .info-box {
+    width: 150px;                  /* equal pill width */
+    height: 52px;
+    justify-content: center;
+    border-radius: 14px;
+    font-size: 13px;
+  }
+
+  /* ===== BUTTONS ===== */
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: fit-content;            /* 👈 same width as hero-info */
+    margin: 0 auto;
+  }
+
+  .btn {
+    width: calc(150px * 2 + 12px); /* 👈 EXACT MATCH */
+    height: 52px;
+    border-radius: 14px;
+    justify-content: center;
+    font-size: 15px;
+  }
+
+  /* PRIMARY BUTTON */
+  .btn.primary {
+    background: linear-gradient(180deg, #f97316, #ea580c);
+    color: #000;
+  }
+
+  /* SECONDARY BUTTON */
+  .btn.secondary {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #fff;
+  }
+}
+
+

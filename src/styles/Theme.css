@@ -1,0 +1,23 @@
+/* DARK THEME */
+[data-theme="dark"] {
+  --bg-dark: #0b1220;
+  --bg-card: #111827;
+  --orange: #f97316;
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+}
+
+/* LIGHT THEME */
+[data-theme="light"] {
+  --bg-dark: #f9fafb;
+  --bg-card: #ffffff;
+  --orange: #ea580c;
+  --text-main: #111827;
+  --text-muted: #4b5563;
+}
+
+body {
+  background: var(--bg-dark);
+  color: var(--text-main);
+  transition: background 0.3s, color 0.3s;
+}
