@@ -40,7 +40,7 @@ const calculateExperience = () => {
 };
 
 /* ================= COUNT-UP HOOK ================= */
-const useCountUp = (target, duration = 800) => {
+const useCountUp = (target, duration = 1100) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
