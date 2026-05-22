@@ -1,5 +1,5 @@
 import "../styles/Hero.css";
-import ProfilePic from "../assets/profile.jpeg";
+import ProfilePic from "../assets/profile.png";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
