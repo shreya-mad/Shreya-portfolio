@@ -25,7 +25,7 @@ export const experienceData = [
     badge: "Software Engineer",
     role: "Full-Stack Developer",
     duration: "March 2024 – May 2026",
-    location: "Noida, sector 62, India",
+    location: "Noida, India",
     description:
       "Developed scalable web applications for institute ERP systems, delivering end-to-end full-stack solutions focused on performance, security, and efficient academic data management.",
        technologies: [
