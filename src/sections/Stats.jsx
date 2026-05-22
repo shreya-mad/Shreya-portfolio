@@ -36,7 +36,9 @@ const calculateExperience = () => {
 
   // Convert to years and round to nearest 0.5
   const years = totalMonths / 12;
-  return Math.round(years * 2) / 2;
+  console.log(`Total Months: ${totalMonths}, Years: ${years}`);
+  // return Math.round(years * 2) / 2;
+  return years.toFixed(1);
 };
 
 /* ================= COUNT-UP HOOK ================= */
@@ -82,7 +84,7 @@ const Stats = () => {
         </div>
 
         <div className="stat-item">
-          <h2>{animatedExperience}+</h2>
+          <h2>{animatedExperience}</h2>
           <p>Years Experience</p>
         </div>
 

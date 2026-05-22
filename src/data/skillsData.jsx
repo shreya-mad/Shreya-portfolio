@@ -20,6 +20,13 @@ export const skillsData = [
     proficiency: 95,
     experience: "2.6 years",
   },
+   {
+    name: "TypeScript",
+    category: "Languages",
+    level: "Intermediate",
+    proficiency: 80,
+    experience: "1 year",
+  },
   {
     name: "React",
     category: "Frontend",
@@ -27,6 +34,13 @@ export const skillsData = [
     proficiency: 90,
     experience: "2.6 years",
   },
+{
+    name: "Next.js",
+    category: "Frontend",
+    level: "Intermediate",
+    proficiency: 80,
+    experience: "1 years",
+},
   {
     name: "Node.js",
     category: "Backend",
